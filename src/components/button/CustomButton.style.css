@@ -1,0 +1,9 @@
+button{
+    background: #003459 !important;
+    border: #003459 !important;
+    color: white !important;
+}
+button img{
+    width: 20px;
+    margin-right: 7px;
+}

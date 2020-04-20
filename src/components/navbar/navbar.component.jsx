@@ -1,10 +1,11 @@
 import React from "react";
 import Logo from "../../assets/images/soundz_logo.png";
 import './navbar.styles.css';
-
+import "../../../src/utils/scroll"
 const Navbar = () => {
+
     return (
-        <nav className="navbar navbar-expand-lg fixed-top navbar-light">
+        <nav className="navbar navbar-expand-lg fixed-top">
             <a className="navbar-brand" href="#"><img src={Logo} alt="sounds logo" className='logo'/></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

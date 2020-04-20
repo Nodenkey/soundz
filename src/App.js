@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Home from "./pages/homepage/homepage";
+import Home from "./pages/homepage/Homepage";
 
-function App() {
+const  App =() => {
   return (
       <Home/>
   )
