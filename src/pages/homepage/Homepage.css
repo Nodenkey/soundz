@@ -24,34 +24,96 @@
 .main-buttons > :first-child{
     margin-right: 20px;
 }
-
+.latest{
+    width: 100%;
+    margin: -20px 0 30px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.fa{
+    font-size: 8px;
+}
+.fas{
+    color: #61dafb;
+}
+.latest a{
+    margin-right: 8px;
+}
 .about{
     height: 500px;
 }
-.about p{
-    padding: 0 20%;
+p{
     color: rgba(255, 255, 255, 0.45);
     line-height: 2em;
+}
+.about p{
+    padding: 0 5%;
     margin-bottom: 40px;
 }
 .section-color{
     background: #00171F;
 }
+.second-section{
+    padding-top: 100px;
+}
 .row{
-    padding: 100px 30px;
+    padding: 0 10px;
     align-items: center;
 }
 .row > :first-child{
     margin-bottom: 30px;
 }
+.my-row{
+    padding-top: 0 !important;
+    align-items: start;
+}
+.my-row img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.first{
+    margin-bottom: 0 !important;
+}
+.creators-row > div > *{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.creators-row >div{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 @media only screen and (min-width: 600px){
     .latest{
-        text-align: right;
-        margin-top: -20px;
+        justify-content: flex-end;
+        margin: -20px 0 30px 0;
+    }
+    .about p{
+        padding: 0 25%;
+    }
+    .row{
+        padding: 0 30px;
     }
     .row > :first-child{
         margin-bottom: 0;
     }
+    .my-row img{
+        margin-bottom: 120px;
+    }
+    .but-one{
+        margin-top: 50px;
+    }
+    .last{
+        margin-top: -80px;
+    }
+    .creators-row > div > *{
+        width: 70%;
+    }
+
 }

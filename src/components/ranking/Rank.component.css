@@ -1,0 +1,41 @@
+.top-list-row{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.top-list-row *{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    margin-bottom: 10px !important;
+}
+.top-list-row > *{
+    margin-bottom: 10px;
+}
+.icon-text i{
+    margin-right: 20px;
+}
+.spinner{
+    text-align: center;
+}
+.song-img{
+    width: 70px;
+    height: 54px;
+    margin-right: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (min-width: 992px){
+    .row{
+        justify-content: flex-start;
+    }
+    .top-list-row *{
+        justify-content: flex-start;
+    }
+
+}

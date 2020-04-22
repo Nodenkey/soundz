@@ -46,3 +46,7 @@ a:hover {
 .nav-transparent {
     background-color: transparent !important;
 }
+.fa-circle-notch{
+    font-size: 60px !important;
+    text-align: center;
+}
