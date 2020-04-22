@@ -11,8 +11,8 @@ import Musician2 from "../../assets/images/musician2.jpg";
 import Musician3 from "../../assets/images/musician3.jpg";
 import Musician4 from "../../assets/images/musician4.jpg";
 import Musician5 from "../../assets/images/musician5.jpg";
-import Creator1 from "../../assets/images/creator1.jpg";
-import Creator2 from "../../assets/images/creator2.jpg";
+import Creator1 from "../../assets/images/creator1.png";
+import Creator2 from "../../assets/images/creator2.png";
 
 
 import Line from "../../components/line/Line.component";
@@ -88,12 +88,13 @@ const Home = () => {
                 </div>
                 <div className="row creators-row">
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <div style={{backgroundImage: `url(${Creator1})`}}>
-                        </div>
-                    </div>
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <div style={{backgroundImage: `url(${Creator2})`}}>
 
+                        </div>
+
+                    </div>
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div style={{backgroundImage: `url(${Creator1})`}}>
                         </div>
                     </div>
                 </div>
