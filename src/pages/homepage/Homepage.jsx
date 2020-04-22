@@ -13,11 +13,11 @@ import Musician4 from "../../assets/images/musician4.jpg";
 import Musician5 from "../../assets/images/musician5.jpg";
 import Creator1 from "../../assets/images/creator1.png";
 import Creator2 from "../../assets/images/creator2.png";
-
-
+import Contact from "../../assets/images/contact.jpg";
 import Line from "../../components/line/Line.component";
 import AllRanks from "../../components/ranking/AllRanks.container";
 import FeaturedAlbum from "../../components/featured_album/FeaturedAlbum.component";
+import Footer from "../../components/footer/Footer.component";
 
 const Home = () => {
     return (
@@ -81,9 +81,10 @@ const Home = () => {
                         <Line inputWidth="15%" inputMargin="50px"/>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 latest">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, aliquid beatae cum ex
-                            expedita ipsa labore, molestias mollitia nihil perspiciatis quas quasi quis vel veritatis
-                            vitae. Aut esse quisquam soluta.</p>
+                        <p>Unfortunately, we do not like showing our faces 😜. But feel free to associate us with our
+                            favourite images. You can find these images as our profile pictures on all social
+                            media platforms and other platforms such as github and gmail.
+                        </p>
                     </div>
                 </div>
                 <div className="row creators-row">
@@ -99,6 +100,19 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section style={{backgroundImage: `url(${Contact})`}} className="container-fluid contact-section">
+                <div className="contact-filter">
+                </div>
+                <div className="contact-text">
+                    <div>
+                        <h2>Contact Us</h2>
+                        <p>Reach us via mail <i className="fas fa-arrow-right animated infinite heartBeat slow"/>
+                        </p>
+                    </div>
+                    <a href="#"><i className="fas fa-envelope-open-text"/></a>
+                </div>
+            </section>
+            <Footer/>
         </>
     )
 }

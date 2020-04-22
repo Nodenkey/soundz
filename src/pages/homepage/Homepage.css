@@ -1,4 +1,4 @@
-.cover {
+.cover, .contact-section {
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,8 @@
     flex-direction: column;
     text-align: center;
 }
-.main-cover{
+
+.main-cover {
     height: 100vh;
 }
 
@@ -19,101 +20,156 @@
 }
 
 .cover h3 {
-    color: #007EA7;
+    color: #61dafb;
 }
-.main-buttons > :first-child{
+
+.main-buttons > :first-child {
     margin-right: 20px;
 }
-.latest{
+
+.latest {
     width: 100%;
     margin: -20px 0 30px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.fa{
+
+.fa {
     font-size: 8px;
 }
-.fas{
+
+.fas {
     color: #61dafb;
 }
-.latest a{
+
+.latest a {
     margin-right: 8px;
 }
-.about{
+
+.about {
     height: 500px;
 }
-p{
+
+p {
     color: rgba(255, 255, 255, 0.45);
     line-height: 2em;
 }
-.about p{
+
+.about p {
     padding: 0 5%;
     margin-bottom: 40px;
 }
-.section-color{
+
+.section-color {
     background: #00171F;
 }
-.second-section{
+
+.second-section {
     padding-top: 100px;
 }
-.row{
+
+.row {
     padding: 0 10px;
     align-items: center;
 }
-.row > :first-child{
+
+.row > :first-child {
     margin-bottom: 30px;
 }
-.my-row{
+
+.my-row {
     padding-top: 0 !important;
     align-items: start;
 }
-.my-row img{
+
+.my-row img {
     width: 100%;
     margin-bottom: 30px;
 }
-.first{
+
+.first {
     margin-bottom: 0 !important;
 }
-.creators-row > div > *{
+
+.creators-row > div > * {
     width: 100%;
     height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.creators-row >div{
+
+.creators-row > div {
     display: flex;
     justify-content: center;
 }
+.creators-row{
+    padding-bottom: 50px !important;
+}
+
+.contact-section {
+    position: relative;
+    height: 250px;
+    padding: 30px;
+}
+.contact-text{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    z-index: 3;
+    position: absolute;
+}
+.contact-filter{
+    position: absolute;
+    background: rgba(0, 23, 31, 0.92);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.fa-envelope-open-text {
+    font-size: 3em;
+    cursor: pointer;
+}
 
 
+@media only screen and (min-width: 600px) {
+    .cover h1 {
+        font-size: 3em;
+    }
 
-@media only screen and (min-width: 600px){
-    .latest{
+    .latest {
         justify-content: flex-end;
         margin: -20px 0 30px 0;
     }
-    .about p{
+
+    .about p {
         padding: 0 25%;
     }
-    .row{
+
+    .row {
         padding: 0 30px;
     }
-    .row > :first-child{
+
+    .row > :first-child {
         margin-bottom: 0;
     }
-    .my-row img{
+
+    .my-row img {
         margin-bottom: 120px;
     }
-    .but-one{
+
+    .but-one {
         margin-top: 50px;
     }
-    .last{
+
+    .last {
         margin-top: -80px;
     }
-    .creators-row > div > *{
+
+    .creators-row > div > * {
         width: 70%;
     }
-
 }
