@@ -118,6 +118,7 @@ p {
     flex-direction: row;
     width: 80%;
     justify-content: space-between;
+    align-items: center;
     z-index: 3;
     position: absolute;
 }
@@ -132,6 +133,11 @@ p {
 .fa-envelope-open-text {
     font-size: 3em;
     cursor: pointer;
+}
+.fa-handshake{
+    display: none;
+    font-size: 3em;
+    color: #003459 !important;
 }
 
 
@@ -171,5 +177,8 @@ p {
 
     .creators-row > div > * {
         width: 70%;
+    }
+    .fa-handshake{
+        display: inline-block;
     }
 }

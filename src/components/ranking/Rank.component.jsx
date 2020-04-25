@@ -1,7 +1,6 @@
 import React from "react";
 import CustomButton from "../button/CustomButton.component";
 import "./Rank.component.css"
-import Cover from "../../assets/images/home_image.jpg";
 
 const Rank = ({id, image, song, artiste, release_date}) => {
     return (
@@ -22,7 +21,9 @@ const Rank = ({id, image, song, artiste, release_date}) => {
                         <i className="fas fa-upload"/>
                         <p>{release_date}</p>
                     </div>
-                    <CustomButton content="Listen" className="col-xs-12 col-sm-12 col-md-12 col-lg-2"/>
+                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+                        <CustomButton content="Listen" width="140px" height="42px"/>
+                    </div>
                 </div>
             </div>
         </>

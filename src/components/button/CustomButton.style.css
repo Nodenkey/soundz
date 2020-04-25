@@ -1,9 +1,29 @@
 button{
-    background: #003459 !important;
-    border: #003459 !important;
-    color: white !important;
+    background: #003459 ;
+    border: 2px solid #003459;
+    display: inline-flex;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    justify-content: center !important;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    height: 46px;
+}
+button:hover{
+    background: transparent;
+    border: 2px solid #61dafb ;
 }
 button img{
     width: 20px;
     margin-right: 7px;
 }
+button *{
+    margin-bottom: 0 !important;
+}
+
+
+

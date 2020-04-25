@@ -1,4 +1,3 @@
-console.log('here');
 const myDiv = document.querySelector("div");
 window.onscroll = function () {
     if(myDiv.childElementCount > 0){

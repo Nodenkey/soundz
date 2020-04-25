@@ -1,0 +1,27 @@
+.fa-play{
+    cursor: pointer;
+    margin-right: 20px;
+}
+p{
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.list-left{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 10px 5%;
+}
+.list-item:hover{
+    background: rgba(0, 52, 89, 0.5);
+}
+.list-left p{
+    cursor: pointer;
+}

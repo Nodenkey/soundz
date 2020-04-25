@@ -1,18 +1,20 @@
 .album-row > div{
     margin-top: 100px;
-    height: 560px;
+    height: 520px;
     padding: 0;
 }
 .sect-one, .sect-two{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 .color-overlay1, .color-overlay2{
     background: rgba(0, 52, 89, 0.7);
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
 }
 .color-overlay2{
     background: rgba(0, 23, 31, 0.95);
@@ -32,4 +34,96 @@
     text-transform: uppercase;
     font-weight: bolder;
     margin-bottom: 0;
+}
+.album-main{
+    padding: 10px 5%;
+    z-index: 3;
+    position: absolute;
+}
+.album-main{
+    width: 100%;
+}
+.album-main p{
+    margin-bottom: 5px;
+    color: #61dafb;
+}
+.album-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.audio-trace{
+    height: 5px;
+    width: 100%;
+    background: rgba(97, 218, 251, 0.15);
+    margin-bottom: 15px;
+}
+.player{
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 85%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.trace{
+    height: 100%;
+    width: 20%;
+    background: #61dafb;
+}
+.fa-play-circle, .fa-pause-circle{
+    cursor: pointer;
+    font-size: 3em;
+    color: #61dafb;
+    margin: 0 30px;
+}
+.player-buttons{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.fa-step-backward, .fa-step-forward{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6) ;
+    font-size: 1em;
+}
+.album-list{
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 30%;
+    left: 0;
+}
+.album-list{
+    padding: 0;
+}
+.player-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.player-bottom p{
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 600px){
+    .album-title{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sect-two .album-main{
+        padding: 50px 5%;
+    }
+    .album-list{
+        top: 27%;
+    }
 }

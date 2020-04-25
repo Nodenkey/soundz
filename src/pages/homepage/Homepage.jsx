@@ -1,5 +1,5 @@
 import React from "react";
-import Cover from "../../assets/images/home_image.jpg"
+import Cover from "../../assets/images/cover.jpg"
 import Navbar from "../../components/navbar/navbar.component";
 import Playstore from "../../assets/images/playstore.png";
 import Apple from "../../assets/images/apple.png";
@@ -109,6 +109,7 @@ const Home = () => {
                         <p>Reach us via mail <i className="fas fa-arrow-right animated infinite heartBeat slow"/>
                         </p>
                     </div>
+                    <i className="fas fa-handshake"/>
                     <a href="#"><i className="fas fa-envelope-open-text"/></a>
                 </div>
             </section>
