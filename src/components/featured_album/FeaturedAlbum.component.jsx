@@ -9,23 +9,18 @@ import {featuredAlbum} from "../../utils/albumList";
 import {connect} from "react-redux";
 
 
-const mapStateToProps = state => {
-    return {
-        playing: state.playAlbum.playing,
-    }
-}
-const FeaturedAlbum = () => {
+const FeaturedAlbum = ({playing}) => {
     const [player, setPlayer] = useState({
         play: "inline-block",
         pause: "none",
-    })
+    });
     const pausePlay = (event) =>{
         if (event.target.id === "play"){
             setPlayer({...player, play: "none", pause: "inline-block"});
         }else if(event.target.id === "pause"){
             setPlayer({...player, pause: "none", play: "inline-block"});
         }
-    }
+    };
 
     return (
         <div className="container-fluid">
@@ -61,7 +56,7 @@ const FeaturedAlbum = () => {
                         <div className="player-bottom">
                             <div>
                                 <p>playing</p>
-                                <h6>{this.props.playing}</h6>
+                                <h6>{playing}</h6>
                             </div>
                             <div className="player-buttons">
                                 <i className="fas fa-step-backward"/>
@@ -78,6 +73,10 @@ const FeaturedAlbum = () => {
             </div>
         </div>
     )
-}
+};
+
+const mapStateToProps = state => ({
+    playing: state.playAlbum.playing
+});
 
 export default connect(mapStateToProps)(FeaturedAlbum);

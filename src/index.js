@@ -4,10 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from "react-redux";
-import {createStore} from "redux";
-import {playAlbum} from "./redux/reducers";
-
-const store = createStore(playAlbum);
+import store from "./redux/store";
 
 ReactDOM.render(
   <React.StrictMode>

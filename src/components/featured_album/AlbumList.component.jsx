@@ -15,15 +15,15 @@ const AlbumList = () => {
 
 
     trackList = featuredAlbum.songs.map((songName, i) => {
-            return <AlbumPlayer songTitle={songName} key={i} id={songName}/>
+            return <AlbumPlayer songTitle={songName} key={i+1000} id={songName}/>
         }
-    )
+    );
     return (
         <>
             {trackList}
 
         </>
     )
-}
+};
 
 export default AlbumList;

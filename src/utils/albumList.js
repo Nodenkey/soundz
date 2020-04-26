@@ -4,4 +4,4 @@ export const featuredAlbum = {
     artiste: "Kakashi Hatake",
     dateReleased: "23.03.2020",
     songs: ["subzero", "2k20", "lullaby", "efawohoben", "lockdown" ]
-}
+};
