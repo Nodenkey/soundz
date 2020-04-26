@@ -81,7 +81,7 @@ const Home = () => {
                         <Line inputWidth="15%" inputMargin="50px"/>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 latest">
-                        <p>Unfortunately, we do not like showing our faces 😜. But feel free to associate us with our
+                        <p>Unfortunately, we do not like showing our faces <span role="img">😜</span>. But feel free to associate us with our
                             favourite images. You can find these images as our profile pictures on all social
                             media platforms and other platforms such as github and gmail.
                         </p>

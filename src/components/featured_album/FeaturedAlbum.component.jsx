@@ -4,13 +4,17 @@ import Album1 from "../../assets/images/album1.jpg";
 import Album2 from "../../assets/images/album2.jpg";
 import CustomButton from "../button/CustomButton.component";
 import Apple from "../../assets/images/apple.png";
-import AlbumList from "./AlbumList.container";
+import AlbumList from "./AlbumList.component";
 import {featuredAlbum} from "../../utils/albumList";
+import {connect} from "react-redux";
 
 
-
+const mapStateToProps = state => {
+    return {
+        playing: state.playAlbum.playing,
+    }
+}
 const FeaturedAlbum = () => {
-
     const [player, setPlayer] = useState({
         play: "inline-block",
         pause: "none",
@@ -57,7 +61,7 @@ const FeaturedAlbum = () => {
                         <div className="player-bottom">
                             <div>
                                 <p>playing</p>
-                                <h6>Subzero</h6>
+                                <h6>{this.props.playing}</h6>
                             </div>
                             <div className="player-buttons">
                                 <i className="fas fa-step-backward"/>
@@ -76,4 +80,4 @@ const FeaturedAlbum = () => {
     )
 }
 
-export default FeaturedAlbum;
+export default connect(mapStateToProps)(FeaturedAlbum);
