@@ -3,5 +3,5 @@ export const featuredAlbum = {
     albumName: "Copy Ninja",
     artiste: "Kakashi Hatake",
     dateReleased: "23.03.2020",
-    songs: ["subzero", "2k20", "lullaby", "efawohoben", "lockdown" ]
+    songs: ["subzero", "two_k_twenty", "lullaby", "efawohoben", "lockdown" ]
 };

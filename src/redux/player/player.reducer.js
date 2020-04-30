@@ -1,7 +1,7 @@
 import {CHANGE_PLAYING} from "./constants";
 
 const initialState = {
-    playing: ""
+    playing: "",
 };
 
 const playAlbumReducer = (state= initialState, action= {}) => {

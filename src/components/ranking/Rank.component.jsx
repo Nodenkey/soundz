@@ -5,7 +5,7 @@ import "./Rank.component.css"
 const Rank = ({id, image, song, artiste, release_date}) => {
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid" data-aos="fade-up">
                 <div className="row top-list-row">
                     <h3 className="col-xs-12 col-sm-12 col-md-12 col-lg-1">0{id}</h3>
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3">

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./FeaturedAlbum.style.css"
 import Album1 from "../../assets/images/album1.jpg";
 import Album2 from "../../assets/images/album2.jpg";
@@ -7,20 +7,41 @@ import Apple from "../../assets/images/apple.png";
 import AlbumList from "./AlbumList.component";
 import {featuredAlbum} from "../../utils/albumList";
 import {connect} from "react-redux";
-
+import {mainMusicController, playNextOrPrevious, seeker} from "../../utils/playMusic";
 
 const FeaturedAlbum = ({playing}) => {
+
     const [player, setPlayer] = useState({
         play: "inline-block",
         pause: "none",
     });
-    const pausePlay = (event) =>{
-        if (event.target.id === "play"){
+
+    useEffect(() => {
+        if (playing !== "") {
             setPlayer({...player, play: "none", pause: "inline-block"});
-        }else if(event.target.id === "pause"){
+        }
+        seeker(playing);
+    }, [playing])
+
+
+    const pausePlay = (event) => {
+        mainMusicController(event, playing);
+        if (event.target.id === "play") {
+            setPlayer({...player, play: "none", pause: "inline-block"});
+        } else if (event.target.id === "pause") {
             setPlayer({...player, pause: "none", play: "inline-block"});
         }
     };
+
+    const nextOrPrevious = (event) => {
+        playNextOrPrevious(event, playing);
+        // if (playing !== ""){
+        //     setPlayer({...player, play: "none", pause: "inline-block"});
+        // }
+        setPlayer({...player, play: "none", pause: "inline-block"});
+
+    }
+    //TODO: reset playing in redux upon clicking next, previous and main play button
 
     return (
         <div className="container-fluid">
@@ -51,22 +72,23 @@ const FeaturedAlbum = ({playing}) => {
                     </div>
                     <div className="player">
                         <div className="audio-trace">
-                            <div className="trace"/>
+                            <div className="trace" id="seeker"/>
                         </div>
                         <div className="player-bottom">
-                            <div>
+                            <div className="playing">
                                 <p>playing</p>
                                 <h6>{playing}</h6>
                             </div>
                             <div className="player-buttons">
-                                <i className="fas fa-step-backward"/>
-                                <i className="far fa-play-circle" style={{display: player.play}} id="play" onClick={pausePlay}/>
-                                <i className="far fa-pause-circle" style={{display: player.pause}} id="pause" onClick={pausePlay}/>
-                                <i className="fas fa-step-forward"/>
+                                <i className="fas fa-step-backward" id="previous" onClick={nextOrPrevious}/>
+                                <i className="far fa-play-circle" style={{display: player.play}} id="play"
+                                   onClick={pausePlay}/>
+                                <i className="far fa-pause-circle" style={{display: player.pause}} id="pause"
+                                   onClick={pausePlay}/>
+                                <i className="fas fa-step-forward" id="next" onClick={nextOrPrevious}/>
                             </div>
-                            <p>2:30/3:30</p>
+                            <p className="time"><span id="playedTime">0:00</span>/<span id="totalTime">0:00</span></p>
                         </div>
-
                     </div>
                     <div className="color-overlay2"/>
                 </div>
@@ -74,6 +96,7 @@ const FeaturedAlbum = ({playing}) => {
         </div>
     )
 };
+
 
 const mapStateToProps = state => ({
     playing: state.playAlbum.playing

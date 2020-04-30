@@ -50,3 +50,7 @@ a:hover {
     font-size: 60px !important;
     text-align: center;
 }
+.bolden{
+    font-weight: bolder;
+    color: white;
+}

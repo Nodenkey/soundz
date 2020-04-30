@@ -1,47 +1,30 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./AlbumPlayer.style.css";
 import {connect} from "react-redux";
 import {setNowPlaying} from "../../redux/player/actions";
+import {duration} from "../../utils/duration";
 
 
-const AlbumPlayer = ({songTitle, id, clickSong}) => {
-    const [player, setPlayer] = useState({
-        duration: "",
-    });
+const AlbumPlayer = ({songTitle, id, clickSong, playSong}) => {
 
-    const song = new Audio();
-    song.src = require(`../../assets/audio/${songTitle}.mp3`);
-    song.preload = "metadata";
-    song.onloadedmetadata = function () {
-        let time = song.duration;
-        let minutes = Math.floor(time / 60);
-        let mod = time % 60;
-        let seconds = Math.floor(mod);
-        const splitTime = mod.toString().split(".");
-        if (Number(splitTime[1][0]) > 5) {
-            seconds = seconds + 1;
-        }
-        if (seconds.toString().length < 2) {
-            seconds = "0" + seconds.toString();
-        }
-        if (seconds === 60) {
-            minutes = minutes + 1;
-            seconds = "00";
-        }
-        const eachDuration = minutes.toString() + ":" + seconds.toString();
-        setPlayer({...player, duration: eachDuration});
-    };
+    const clickOnSong = (event) => {
+        playSong(event);
+        clickSong(event.target.id);
+    }
+
+    useEffect(()=>{
+        duration(songTitle)
+    },[])
 
 
-    // const {clickSong} = this.props.dispatch.clickSong();
     return (
         <>
             <div className="list-item">
                 <div className="list-left">
-                    <i onClick={() => clickSong(songTitle)} className="fas fa-play" id={id}/>
-                    <p onClick={() => clickSong(songTitle)} id={id}>{songTitle}</p>
+                    <i onClick={clickOnSong} className="fas fa-play featured-song" id={id}/>
+                    <p onClick={clickOnSong} id={id} className="featured-song">{songTitle}</p>
                 </div>
-                <p>{player.duration}</p>
+                <p id={`durationEl${songTitle}`} className="featured-song"/>
             </div>
         </>
     )
